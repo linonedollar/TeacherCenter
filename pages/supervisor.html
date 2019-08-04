@@ -14,7 +14,6 @@
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- Custom styles for this page -->
     <link href="../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    
   </head>
   <body id="page-top">
     <!-- Page Wrapper -->
@@ -97,7 +96,7 @@
             <div class="container-fluid">
               <!-- Page Heading -->
               <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">專案審查管理</h1>
+                <h1 class="h3 mb-0 text-gray-800">專案審查人員管理</h1>
               </div>
               <!-- Content Row -->
               <div class="table-responsive mt-3">
@@ -118,34 +117,50 @@
                         <option value="SchoolProject">學校專案邀約</option>
                       </select>
                     </div>
-                    <div class="col-auto my-1">
-                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected>不限時間</option>
-                        <option>108-2</option>
-                        <option>108-1</option>
-                      </select>
-                    </div>
                     <div class="col-2 my-1">
                       <button type="submit" class="btn btn-primary">查詢</button>
                     </div>
+
                   </div>
                 </form>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-
-                      <th>學年度</th>
                       <th>專案類別</th>
-                      <th>專案名稱</th>
-                      <th>評審名單</th>
+                      <th>專案帳號</th>
+                      <th>操作</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>108-1</td>
                       <td>網路輔助教學課程</td>
-                      <td>『108-1』網路輔助教學課程申請</td>
-                      <td><button class="btn btn-primary">未指定</button></td>
+                      <td>A001</td>
+                      <td><button class="btn btn-info">修改</button></td>
+                    </tr>
+                    <tr>
+                      <td>網路輔助教學課程</td>
+                      <td>A002</td>
+                      <td><button class="btn btn-info">修改</button></td>
+                    </tr>
+                    <tr>
+                      <td>網路輔助教學課程</td>
+                      <td>A003</td>
+                      <td><button class="btn btn-info">修改</button></td>
+                    </tr>
+                    <tr>
+                      <td>遠距教學課程</td>
+                      <td>B001</td>
+                      <td><button class="btn btn-info">修改</button></td>
+                    </tr>
+                    <tr>
+                      <td>遠距教學課程</td>
+                      <td>B002</td>
+                      <td><button class="btn btn-info">修改</button></td>
+                    </tr>
+                    <tr>
+                      <td>遠距教學課程</td>
+                      <td>B003</td>
+                      <td><button class="btn btn-info">修改</button></td>
                     </tr>
                   </tbody>
                 </table>
@@ -172,20 +187,21 @@
       </a>
       <!-- Bootstrap core JavaScript-->
       <script src="../assets/vendor/jquery/jquery.min.js"></script>
-      <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- Core plugin JavaScript-->
-      <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-      <!-- Custom scripts for all pages-->
-      <script src="../assets/js/sb-admin-2.min.js"></script>
-      <!-- Page level plugins -->
-      <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
-      <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-      <!-- Page level custom scripts -->
-      <script src="js/demo/datatables-demo.js"></script>
-      <!-- Page datatimepicker scripts -->
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+          <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- Core plugin JavaScript-->
+          <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+          <!-- Custom scripts for all pages-->
+          <script src="../assets/js/sb-admin-2.min.js"></script>
+          <!-- Page level plugins -->
+          <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
+          <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+          <!-- Page level custom scripts -->
+          <script src="js/demo/datatables-demo.js"></script>
+          <script> 
+            $(function(){
+              $("#accordionSidebar").load("nav.html"); 
+            });
+            </script> 
       <script>
       $(function() {
       $('input[name="datetimes"]').daterangepicker({
@@ -198,11 +214,6 @@
       });
       });
       </script>
-      <script> 
-        $(function(){
-          $("#accordionSidebar").load("nav.html"); 
-        });
-        </script> 
     
     </body>
   </html>
