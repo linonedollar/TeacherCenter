@@ -18,12 +18,12 @@ $('#subjectForm').submit(function (e) {
     let Subject = {
         Su_Category: Su_Category,
         Su_SubName: Su_SubName,
-        Su_AppStartTime: Su_AppStartTime,
-        Su_AppEndTime: Su_AppEndTime,
-        Su_AppReviewStartTime: Su_AppReviewStartTime,
-        Su_AppReviewEndTime: Su_AppReviewEndTime,
-        Su_CloseReviewStartTime: Su_CloseReviewStartTime,
-        Su_CloseReviewEndTime: Su_CloseReviewEndTime
+        Su_AppStartTime: moment(Su_AppStartTime).format('YYYY-MM-DD HH:mm'),
+        Su_AppEndTime: moment(Su_AppEndTime).format('YYYY-MM-DD HH:mm'),
+        Su_AppReviewStartTime: moment(Su_AppReviewStartTime).format('YYYY-MM-DD HH:mm'),
+        Su_AppReviewEndTime: moment(Su_AppReviewEndTime).format('YYYY-MM-DD HH:mm'),
+        Su_CloseReviewStartTime: moment(Su_CloseReviewStartTime).format('YYYY-MM-DD HH:mm'),
+        Su_CloseReviewEndTime: moment(Su_CloseReviewEndTime).format('YYYY-MM-DD HH:mm')
     }
     
 
@@ -45,8 +45,6 @@ $('#subjectForm').submit(function (e) {
             console.log(XMLHttpRequest);
         }
     });
-
-    // moment(Su_AppStartTime).format('MM-DD-YYYY')
     
 });
 
