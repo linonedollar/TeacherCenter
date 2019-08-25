@@ -114,37 +114,37 @@
                 <!-- /.container-fluid -->
                 <div class="container-fluid">
                     <!-- DataTales Example -->
-                    <form>
+                    <form id='subjectForm'>
                         <div class="input-group input-group-lg mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">專案名稱</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg">
+                            <input id="input_subjectName" type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-lg" required>
                         </div>
                         <div class="input-group input-group-lg mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">申請時間</span>
                             </div>
-                            <input type="text" class="form-control" name="datetimes" />
+                            <input id="input_appTime" type="text" class="form-control" name="datetimes" />
                         </div>
                         <div class="input-group input-group-lg mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">申請審查時間</span>
                             </div>
-                            <input type="text" class="form-control" name="datetimes" />
+                            <input id="input_appReviewTime" type="text" class="form-control" name="datetimes" />
                         </div>
                         <div class="input-group input-group-lg mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">結案審查時間</span>
                             </div>
-                            <input type="text" class="form-control" name="datetimes" />
+                            <input id="input_closeReviewTime" type="text" class="form-control" name="datetimes" />
                         </div>
                         <div class="input-group input-group-lg mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">本次申請專案類別</span>
                             </div>
-                            <select class="form-control" id="">
+                            <select class="form-control" id="select_category">
                                 <option>{{專案類別}}</option>
                             </select>
                         </div>
@@ -244,7 +244,8 @@
             $("#accordionSidebar").load("nav.html");
         });
     </script>
-
+    <!-- <script type="text/javascript" src="../script/js/funtion.js"></script> -->
+    <script type="module" src="../script/js/project-add.js"></script>
 </body>
 
 </html>
