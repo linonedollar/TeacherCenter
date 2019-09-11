@@ -7,9 +7,11 @@
         <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
         <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="../assets/css/layout.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/pagenation.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="../assets/js/jquery-latest.min.js"></script>
         <script src="../assets/js/jquery.validate.min.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/pagination.min.js"></script>
     </head>
     <body>
         <div id="sublink" class="fadeInDown animated animatedS1">
@@ -48,15 +50,15 @@
         </div>
         <nav class="fadeInDown animated animatedS4">
             <ul id="sidebar">
-                <li><a href="/pages/f_post.html?id=1">網路輔助教學課程</a></li>
-                <li><a href="/pages/f_post.html?id=2">遠距教學課程</a></li>
-                <li><a href="/pages/f_post.html?id=3">數位學習課程</a></li>
-                <li><a href="/pages/f_post.html?id=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
-                <li><a href="/pages/f_post.html?id=5">教材、教具</a></li>
-                <li><a href="/pages/f_post.html?id=6">教科書</a></li>
-                <li><a href="/pages/f_post.html?id=7">教學專題研究</a></li>
-                <li><a href="/pages/f_post.html?id=8">教學工作坊</a></li>
-                <li><a href="/pages/f_post.html?id=9">教學創新課程</a></li>
+                <li><a href="/pages/f_post.html?cid=1">網路輔助教學課程</a></li>
+                <li><a href="/pages/f_post.html?cid=2">遠距教學課程</a></li>
+                <li><a href="/pages/f_post.html?cid=3">數位學習課程</a></li>
+                <li><a href="/pages/f_post.html?cid=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
+                <li><a href="/pages/f_post.html?cid=5">教材、教具</a></li>
+                <li><a href="/pages/f_post.html?cid=6">教科書</a></li>
+                <li><a href="/pages/f_post.html?cid=7">教學專題研究</a></li>
+                <li><a href="/pages/f_post.html?cid=8">教學工作坊</a></li>
+                <li><a href="/pages/f_post.html?cid=9">教學創新課程</a></li>
             </ul>
         </nav>
         
@@ -67,7 +69,7 @@
                     <div class="container-fulid pt-3">
                         
                         <div class="row justify-content-center">
-                            <div class="card-deck">
+                            <div id="card-item" class="card-deck">
                                 <div class="card">
                                     <div class="card-header text-center">{{專案名稱}}</div>
                                     <div class="card-body">
@@ -103,7 +105,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row pt-1">
+                        <div class="row pt-4 justify-content-end">
+                            <div id="Pagination"></div>
+                        </div>
+                        <!-- <div class="row pt-1">
                             
                             <nav aria-label="...">
                                 <ul class="pagination justify-content-end">
@@ -120,7 +125,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

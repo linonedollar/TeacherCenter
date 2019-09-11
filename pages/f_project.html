@@ -49,15 +49,15 @@
     </div>
     <nav class="fadeInDown animated animatedS4">
         <ul id="sidebar">
-            <li><a href="/pages/f_post.html?id=1">網路輔助教學課程</a></li>
-            <li><a href="/pages/f_post.html?id=2">遠距教學課程</a></li>
-            <li><a href="/pages/f_post.html?id=3">數位學習課程</a></li>
-            <li><a href="/pages/f_post.html?id=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
-            <li><a href="/pages/f_post.html?id=5">教材、教具</a></li>
-            <li><a href="/pages/f_post.html?id=6">教科書</a></li>
-            <li><a href="/pages/f_post.html?id=7">教學專題研究</a></li>
-            <li><a href="/pages/f_post.html?id=7">教學工作坊</a></li>
-            <li><a href="/pages/f_post.html?id=9">教學創新課程</a></li>
+            <li><a href="/pages/f_post.html?cid=1">網路輔助教學課程</a></li>
+            <li><a href="/pages/f_post.html?cid=2">遠距教學課程</a></li>
+            <li><a href="/pages/f_post.html?cid=3">數位學習課程</a></li>
+            <li><a href="/pages/f_post.html?cid=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
+            <li><a href="/pages/f_post.html?cid=5">教材、教具</a></li>
+            <li><a href="/pages/f_post.html?cid=6">教科書</a></li>
+            <li><a href="/pages/f_post.html?cid=7">教學專題研究</a></li>
+            <li><a href="/pages/f_post.html?cid=7">教學工作坊</a></li>
+            <li><a href="/pages/f_post.html?cid=9">教學創新課程</a></li>
         </ul>
     </nav>
 
@@ -69,25 +69,32 @@
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="計畫主持人/老師姓名：ＸＸＸ" disabled>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="人事碼：" disabled>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" id="today" disabled>
                     </div>
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="聘任系所：國際貿易學系" disabled>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="所屬學院：商學院" disabled>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="到校日：1990/08/01" disabled>
-                            <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="到校期間：29年0月" disabled>
                     </div>
                     <form>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-lg">Email</span>
+                                <span class="input-group-text" id="inputGroup-sizing-lg">計畫名稱</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-lg">
+                        </div>
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-lg" type="email">Email</span>
                             </div>
                             <input type="text" class="form-control" aria-label="Sizing example input"
                                 aria-describedby="inputGroup-sizing-lg">
@@ -166,16 +173,10 @@
                                 <option>{{當前學期二}}</option>
                             </select>
                         </div>
-                        <div class="input-group input-group-lg">
+                        <div id="type_container" class="input-group input-group-lg">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-lg">本次申請專案類別</span>
+                                <span class="input-group-text" id="inputGroup-sizing-lg">本次申請型態</span>
                             </div>
-                            <select class="form-control" id="">
-                                <option>{{專案類別}}</option>
-                            </select>
-                            <select class="form-control" id="">
-                                <option>{{專案型態}}</option>
-                            </select>
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
@@ -259,13 +260,13 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script>
         // 給input  date設定預設值
@@ -275,10 +276,11 @@
         //格式化月，如果小於9，前面補0
         var month = ("0" + (now.getMonth() + 1)).slice(-2);
         //拼裝完整日期格式
-        var today = "申請日："+now.getFullYear() + "/" + (month) + "/" + (day);
+        var today = "申請日：" + now.getFullYear() + "/" + (month) + "/" + (day);
         //完成賦值
         $('#today').val(today);
     </script>
+    <script type="module" src="../script/js/f_project.js"></script>
 </body>
 
 </html>

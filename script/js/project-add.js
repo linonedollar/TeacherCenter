@@ -1,7 +1,7 @@
 import { FillSelect, SingleFileUpload } from './funtion.js';
 
 $(function () {
-    GetCategory();
+    // GetCategory();
 });
 
 $('#subjectForm').submit(function (e) {
@@ -47,7 +47,6 @@ $('#subjectForm').submit(function (e) {
     });
     
 });
-
 
 function GetCategory() {
     $.ajax({
