@@ -7,35 +7,122 @@ $(function () {
     if (cid == undefined || cid == '') {
         location.href = '../index.html';
     }
+    let sid = params.get('sid');
+    if (sid == undefined || sid == '') {
+        location.href = '../index.html';
+    }
     GetTypeRender(cid);
-    // GetSubject(cid);
+    GetSubject(sid);
     // RenderSubject();
 });
 
 
+$('#projectForm').submit(function (e) {
+
+    e.preventDefault();
+    let url = new URL(location.href);
+    let params = url.searchParams;
+    let cid = params.get('cid');
+    let ProjectCategroy = params.get('sid');
+    let ProjectName = $('#input_ProjectName').val();
+    let Email = $('#input_Email').val();
+    let Tel = $('#input_Tel').val();
+    let HadProjectBefore = $('#input_HadProjectBefore').val();
+    let Amount_Before = $('#input_Amount_Before').val();
+    let Other_Project = $('#select_Other_Project').val();
+    if (Other_Project == 'other')
+        Other_Project = $('#input_Other_Project').val();
+
+    let Amount_Other = $('#input_Amount_Other').val();
+    let CourseName = $('#input_CourseName').val();
+    let CourseCode = $('#input_CourseCode').val();
+    let Publisher = $('#input_Publisher').val();
+    let StartofSemester = $('#select_start_term option:selected').text();
+    let EndofSemester = $('#select_end_term option:selected').text();
+
+    let Type = '';
+    let WorkshopName = '';
+
+    let selectType = $('#select_type').val();
+
+    if (selectType != 'null') {
+        Type = $('#select_type option:selected').text();
+        if (selectType === 'input_name' || selectType === 'input_other') {
+            WorkshopName = $('#type_text').val();
+        }
+    }
+
+    let ApplicationFormData = {
+        ProjectCategroy: ProjectCategroy,
+        ProjectName: ProjectName,
+        Email: Email,
+        Tel: Tel,
+        HadProjectBefore: HadProjectBefore,
+        Amount_Before: Amount_Before,
+        Amount_Other: Amount_Other,
+        CourseName: CourseName,
+        CourseCode: CourseCode,
+        Publisher: Publisher,
+        StartofSemester: StartofSemester,
+        EndofSemester: EndofSemester,
+        Type: Type,
+        WorkshopName: WorkshopName
+    }
+
+    console.log(ApplicationFormData);
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: "/controller/SQL.ashx",
+    //     data: JSON.stringify(Subject),
+    //     contentType: "application/json; charset=utf-8",
+    //     dataType: "json",
+    //     success: function (data) {
+    //         if(data.Messenger === 'SUCCESS'){
+    //             alert('新增成功');
+    //         }
+    //         else{
+    //             alert(data.Messenger);
+    //         }
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //         console.log(XMLHttpRequest);
+    //     }
+    // });
+    // return false;
+});
+
+$('.custom-file input').change(function (e) {
+    let name = $(this).val().replace(/.*[\/\\]/, '');
+    let object = $(this).next();
+    object.html(name);
+});
+
+$('#select_Other_Project').change(function (e) {
+    let val = $('#select_Other_Project').val();
+    if (val == 'other')
+        $('#input_Other_Project').prop("disabled", false);
+    else
+        $('#input_Other_Project').prop("disabled", true);
+})
+
+
 //網頁渲染
 function GetTypeRender(params) {
-    let html;
     let optHtml = GetTypeOptions(params);
     switch (params) {
         case '2':
         case '6':
         case '8':
         case '9':
-            html =
-                `<select class="form-control" id="select_type">
-                    ${optHtml}
-                </select>`;
+            $('#select_type').prop('disabled', false);
             break;
         default:
-            html =
-                `<select class="form-control" id="select_type" disabled>
-                    ${optHtml}
-                </select>`;
+            $('#select_type').prop('disabled', true);
             break;
     }
-    $('#type_container select').remove();
-    $('#type_container').append(html);
+    $('#select_type').empty();
+    $('#select_type').append(optHtml);
 
     $('#select_type').change(function (e) {
         $('#type_text').remove();
@@ -58,3 +145,63 @@ function GetTypeRender(params) {
 
     });
 }
+
+//取得選擇的subject 並填入下拉式選單
+function GetSubject(sid) {
+    // let data = {
+    //     idSubject: sid,
+    // }
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '',
+    //     data: JSON.stringify(data),
+    //     contentType: 'application/json; charset=utf-8',
+    //     dataType: 'json',
+    //     success: function (data) {
+    //         if (data.Messenger === 'SUCCESS') {
+    //             RenderSubject(data.data);
+    //         }
+    //         else {
+    //             alert(data.Messenger);
+    //         }
+    //     },
+    //     error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //         console.log(XMLHttpRequest);
+    //     }
+    // });
+    //下面測試用，上面正式拿資料
+    let data = {
+        Su_SubName: '我是名稱',
+        Su_StartSemester: '108-1',
+        Su_EndSemester: '108-2'
+    }
+    RenderSubject(data);
+}
+
+function RenderSubject(data) {
+    $('#subName').html(data.Su_SubName);
+    let object = $('#select_start_term');
+    object.empty();
+    object.append(`<option value="0">${data.Su_StartSemester}</option>`);
+    object.append(`<option value="1">${data.Su_EndSemester}</option>`);
+
+    let object_2 = $('#select_end_term');
+    object_2.empty();
+    object_2.append(`<option value="0">${data.Su_StartSemester}</option>`);
+    object_2.append(`<option value="1">${data.Su_EndSemester}</option>`);
+
+    $('#select_start_term').change(function (e) {
+        let object_2 = $('#select_end_term');
+        if (object.val() == '1') {
+            object_2.empty();
+            object_2.append(`<option value="1">${data.Su_EndSemester}</option>`);
+        }
+        else {
+            object_2.empty();
+            object_2.append(`<option value="0">${data.Su_StartSemester}</option>`);
+            object_2.append(`<option value="1">${data.Su_EndSemester}</option>`);
+        }
+
+    });
+}
+

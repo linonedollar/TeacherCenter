@@ -44,7 +44,7 @@ export function GetTypeOptions(key) {
             break;
         default:
             opt = [
-                { value: '', text: '此類別無須選擇' }
+                { value: 'null', text: '此類別無須選擇' }
             ]
             break;
     }

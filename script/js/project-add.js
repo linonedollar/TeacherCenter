@@ -14,6 +14,8 @@ $('#subjectForm').submit(function (e) {
     let Su_AppReviewEndTime = $('#input_appReviewTime').data('daterangepicker').startDate;
     let Su_CloseReviewStartTime = $('#input_closeReviewTime').data('daterangepicker').startDate;
     let Su_CloseReviewEndTime = $('#input_closeReviewTime').data('daterangepicker').startDate;
+    let Su_StartSemester = $('#input_StartSemester').val();
+    let Su_EndSemester = $('#input_EndSemester').val();
 
     let Subject = {
         Su_Category: Su_Category,
@@ -23,7 +25,9 @@ $('#subjectForm').submit(function (e) {
         Su_AppReviewStartTime: moment(Su_AppReviewStartTime).format('YYYY-MM-DD HH:mm'),
         Su_AppReviewEndTime: moment(Su_AppReviewEndTime).format('YYYY-MM-DD HH:mm'),
         Su_CloseReviewStartTime: moment(Su_CloseReviewStartTime).format('YYYY-MM-DD HH:mm'),
-        Su_CloseReviewEndTime: moment(Su_CloseReviewEndTime).format('YYYY-MM-DD HH:mm')
+        Su_CloseReviewEndTime: moment(Su_CloseReviewEndTime).format('YYYY-MM-DD HH:mm'),
+        Su_StartSemester:Su_StartSemester,
+        Su_EndSemester:Su_EndSemester
     }
     
 
