@@ -1,5 +1,5 @@
 import { GetTypeOptions } from './comm.js';
-
+import { checkUserLogin } from './funtion.js';
 $(function () {
     let url = new URL(location.href);
     let params = url.searchParams;
@@ -11,6 +11,8 @@ $(function () {
     if (sid == undefined || sid == '') {
         location.href = '../index.html';
     }
+    checkUserLogin();
+    fillUserData();
     GetTypeRender(cid);
     GetSubject(sid);
     // RenderSubject();
@@ -23,6 +25,14 @@ $('#projectForm').submit(function (e) {
     let url = new URL(location.href);
     let params = url.searchParams;
     let cid = params.get('cid');
+
+    let TeacherName = $('#input_TeacherName').val();
+    let PersonnelCode = $('#input_TeacherCode').val();
+    let School = $('#input_School').val();
+    let Department = $('#input_Department').val();
+    let ArrivalDate = $('#input_ArrivalDate').val();
+    let ArrivalPeriod = $('#input_ArrivalPeriod').val();
+
     let ProjectCategroy = params.get('sid');
     let ProjectName = $('#input_ProjectName').val();
     let Email = $('#input_Email').val();
@@ -53,6 +63,12 @@ $('#projectForm').submit(function (e) {
     }
 
     let ApplicationFormData = {
+        TeacherName: TeacherName,
+        PersonnelCode: PersonnelCode,
+        School: School,
+        Department: Department,
+        ArrivalDate: ArrivalDate,
+        ArrivalPeriod: ArrivalPeriod,
         ProjectCategroy: ProjectCategroy,
         ProjectName: ProjectName,
         Email: Email,
@@ -205,3 +221,18 @@ function RenderSubject(data) {
     });
 }
 
+function fillUserData() {
+    let TeacherName = '計畫主持人/老師姓名：' + sessionStorage.TeacherName;
+    let PersonnelCode = '人事碼：' + sessionStorage.PersonnelCode;
+    let ArrivalDate = '到校日：' + sessionStorage.ArrivalDate;
+    let ArrivalPeriod = '到校期間：' + sessionStorage.ArrivalPeriod;
+    let Department = '聘任系所：' + sessionStorage.Department;
+    let School = '所屬學院：' + sessionStorage.School;
+
+    $('#input_TeacherName').val(TeacherName);
+    $('#input_TeacherCode').val(PersonnelCode);
+    $('#input_School').val(School);
+    $('#input_Department').val(Department);
+    $('#input_ArrivalDate').val(ArrivalDate);
+    $('#input_ArrivalPeriod').val(ArrivalPeriod);
+}

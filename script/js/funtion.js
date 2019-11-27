@@ -32,3 +32,9 @@ export function SingleFileUpload(url, id) {
     });
 
 }
+export function checkUserLogin(){
+    let cycu_admin = sessionStorage.cycu_admin;
+    if(cycu_admin == undefined){
+        location.href = '../index.html';
+    }
+}

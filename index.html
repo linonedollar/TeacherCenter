@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="sublink" class="fadeInDown animated animatedS1">
-        <a href="f_index.html">首頁</a>│
+        <a href="index.html">首頁</a>│
         <a href="http://www1.cycu.edu.tw/" target="_blank">中原大學</a>│
         <a href="http://uip.cycu.edu.tw/UIPWeb/wSite/ct?xItem=65609&ctNode=22088&mp=20001" target="_blank">教師發展中心</a>│
         <a href="" target="_blank">聯絡我們</a>
@@ -24,18 +24,7 @@
         <h2 class="sitename fadeInDown animated animatedS3">中原大學教學計畫管理資訊平台</h2>
         <div id="searchBar" class="fadeInDown animated animatedS3">
             <div id="BarBg">
-                <form class="form-inline justify-content-center" method="post" id="login_Form" action="#">
-                    <input type="hidden" name="" value="">
-                    <div class="form-group">
-                        <label>帳號：
-                            <input type="text" class="form-control form-control-sm" id="cycu-admin" name="cycu-admin" required="required">
-                        </label>
-                        <label>密碼：
-                            <input type="password" class="form-control form-control-sm" name="cycu-pws" id="cycu-pws" required="required">
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-info" value="登入">登入</button>
-                </form>
+                
             </div>
         </div>
     </div>
@@ -57,17 +46,11 @@
             <div id="noticeContent">
                 <h2><img src="assets/imgs/icon_news.png">最新資訊</h2>
                 <div>
-                    <ul class="homelist">
-                        <li><a href="f_project.html" class="box"><h3>2019-07-03</h3><p>【108-1】教學創新課程</p></a></li>
-
-                        <li><a href="f_project.html" class="box"><h3>2019-07-03</h3><p>【108-1】教學創新課程</p></a></li>
-
-                        <li><a href="f_project.html" class="box"><h3>2019-07-03</h3><p>【108-1】教學創新課程</p></a></li>
-
-                        <li><a href="f_project.html" class="box"><h3>2019-07-03</h3><p>【108-1】教學創新課程</p></a></li>
+                    <ul id="project_link" class="homelist">
+                       
                     </ul>
-                    <div class="text-center">
-                                      <button class="btn-lg success">更多資訊</button>
+                    <!-- <div class="text-center">
+                                      <button class="btn-lg success">更多資訊</button> -->
 
                     </div>
                 </div>
@@ -115,5 +98,6 @@
             <p>本網站於每日中午12:00~14:00進行系統維護，不便之處，敬請見諒！</p>
         </div>
     </footer>
+    <script type="module" src="script/js/index.js"></script>
 </body>
 </html>
