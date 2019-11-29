@@ -95,7 +95,7 @@ $('#projectForm').submit(function (e) {
     //     dataType: "json",
     //     success: function (data) {
     //         if(data.Messenger === 'SUCCESS'){
-    //             alert('新增成功');
+    //              uploadfile(data.data.id);
     //         }
     //         else{
     //             alert(data.Messenger);
@@ -235,4 +235,38 @@ function fillUserData() {
     $('#input_Department').val(Department);
     $('#input_ArrivalDate').val(ArrivalDate);
     $('#input_ArrivalPeriod').val(ArrivalPeriod);
+}
+
+
+function fileUpload(id) {
+
+    let fileData = new FormData();
+
+    fileData = appendFile('inputGroupFile01', fileData);
+    fileData = appendFile('inputGroupFile02', fileData);
+    fileData = appendFile('inputGroupFile03', fileData);
+    fileData = appendFile('inputGroupFile04', fileData);
+
+    fileData.append('id', id);
+    //之後送ashx做處理
+    $.ajax({
+        url: "/controller/uploadfile.ashx",
+        type: "post",
+        data: fileData,
+        contentType: false,
+        processData: false,
+        async: false,
+        success: function (data) {
+            alert(data.Messenger);
+        }
+    });
+
+}
+
+function appendFile(id, fileData) {
+    if ($(`#${id}`).val()) {
+        let files = $(`#${id}`)[0].files;
+        fileData.append(files[0].name, files[0]);
+    }
+    return fileData;
 }
