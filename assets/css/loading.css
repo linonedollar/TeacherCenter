@@ -1,0 +1,190 @@
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+	position: fixed;
+	z-index: 999999;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-g {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  
+  -webkit-animation: rotation 1s infinite;
+          animation: rotation 1s infinite;
+}
+.loader-g .shape {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.loader-g .shape.shape-1 {
+  left: 0;
+  background-color: #4285F4;
+}
+.loader-g .shape.shape-2 {
+  right: 0;
+  background-color: #34A853;
+}
+.loader-g .shape.shape-3 {
+  bottom: 0;
+  background-color: #FBBC05;
+}
+.loader-g .shape.shape-4 {
+  bottom: 0;
+  right: 0;
+  background-color: #EA4335;
+}
+.loader-g .shape-1 {
+  -webkit-animation: shape1 0.5s infinite alternate;
+          animation: shape1 0.5s infinite alternate;
+}
+.loader-g .shape-2 {
+  -webkit-animation: shape2 0.5s infinite alternate;
+          animation: shape2 0.5s infinite alternate;
+}
+.loader-g .shape-3 {
+  -webkit-animation: shape3 0.5s infinite alternate;
+          animation: shape3 0.5s infinite alternate;
+}
+.loader-g .shape-4 {
+  -webkit-animation: shape4 0.5s infinite alternate;
+          animation: shape4 0.5s infinite alternate;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+}
+@keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+}
+@-webkit-keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+  }
+}
+@keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+  }
+}
+@-webkit-keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(20px, -20px);
+            transform: translate(20px, -20px);
+  }
+}
+@keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(20px, -20px);
+            transform: translate(20px, -20px);
+  }
+}
+@-webkit-keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+  }
+}
+@keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(-20px, -20px);
+            transform: translate(-20px, -20px);
+  }
+}
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 999999; /* Specify a stack order in case you're using a different order for other elements */
+}

@@ -8,15 +8,16 @@
     <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../assets/css/layout.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/loading.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../assets/js/jquery-latest.min.js"></script>
     <script src="../assets/js/jquery.validate.min.js"></script>
 </head>
 
 <body>
     <div id="sublink" class="fadeInDown animated animatedS1">
-        <a href="">首頁</a>│
-        <a href="" target="_blank">中原大學</a>│
-        <a href="" target="_blank">教師發展中心</a>│
+        <a href="../index.html">首頁</a>│
+        <a href="http://www1.cycu.edu.tw/" target="_blank">中原大學</a>│
+        <a href="http://uip.cycu.edu.tw/UIPWeb/wSite/ct?xItem=65609&ctNode=22088&mp=20001" target="_blank">教師發展中心</a>│
         <a href="" target="_blank">聯絡我們</a>
     </div>
     <div class="mainCon">
@@ -81,16 +82,17 @@
                             aria-describedby="inputGroup-sizing-lg" value="所屬學院：" disabled>
                         <input id="input_ArrivalDate" type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" value="到校日：" disabled>
-                        <input id="input_ArrivalPeriod" type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-lg" value="到校期間：" disabled>
+                        <input id="input_ArrivalPeriod" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" value="到校期間："
+                            disabled>
                     </div>
                     <form id="projectForm">
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">計畫名稱</span>
                             </div>
-                            <input id="input_ProjectName" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" required>
+                            <input id="input_ProjectName" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" required>
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
@@ -110,10 +112,12 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">曾執行教學資源製作專案</span>
                             </div>
-                            <input id="input_HadProjectBefore" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="專案名稱-金額 ex:教學計畫專案-20000">
-                            <input id="input_Amount_Before" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="否，免填">
+                            <input id="input_HadProjectBefore" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="專案名稱-金額 ex:教學計畫專案-20000">
+                            <input id="input_Amount_Before" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="否，免填">
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
@@ -125,10 +129,12 @@
                                 <option>課程推廣計畫</option>
                                 <option value="other">其他</option>
                             </select>
-                            <input id="input_Other_Project" type="text" class="form-control col-md-4" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="其他：專案名稱" disabled>
-                            <input id="input_Amount_Other" type="text" class="form-control col-auto" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="獲補助金額，若未核定則寫申請金額">
+                            <input id="input_Other_Project" type="text" class="form-control col-md-4"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="其他：專案名稱" disabled>
+                            <input id="input_Amount_Other" type="text" class="form-control col-auto"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="獲補助金額，若未核定則寫申請金額">
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
@@ -143,22 +149,25 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">課程名稱</span>
                             </div>
-                            <input id="input_CourseName" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="(教科書專案請寫書名、工作坊不需填)">
+                            <input id="input_CourseName" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="(教科書專案請寫書名、工作坊不需填)">
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">課程代碼</span>
                             </div>
-                            <input id="input_CourseCode" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="(教科書、工作坊專案不需填)">
+                            <input id="input_CourseCode" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="(教科書、工作坊專案不需填)">
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">出版社</span>
                             </div>
-                            <input id="input_Publisher" type="text" class="form-control" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-lg" placeholder="(教科書專案必填)">
+                            <input id="input_Publisher" type="text" class="form-control"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"
+                                placeholder="(教科書專案必填)">
                         </div>
                         <div class="input-group input-group-lg">
                             <div class="input-group-prepend">
@@ -178,7 +187,7 @@
                                 <span class="input-group-text" id="inputGroup-sizing-lg">本次申請型態</span>
                             </div>
                             <select class="form-control" id="select_type" disabled>
-                                
+
                             </select>
                         </div>
                         <div class="input-group input-group-lg">
@@ -188,7 +197,8 @@
                             <div class="input-group mb-1 ">
                                 <div class="custom-file">
                                     <input id="inputFile" type="file" class="custom-file-input" id="inputGroupFile01">
-                                    <label id="lableFile" class="custom-file-label" for="inputGroupFile01">教學資源製作與教學精進補助專案計畫書</label>
+                                    <label id="lableFile" class="custom-file-label"
+                                        for="inputGroupFile01">教學資源製作與教學精進補助專案計畫書</label>
                                 </div>
                             </div>
                             <div class="input-group mb-1 ">
@@ -216,6 +226,7 @@
 
                                 <button type="submit" class="btn btn-primary">確定送出</button>
                                 <button type="submit" class="btn btn-primary" disabled="">列印申請表</button>
+                                <button id="loadingbtn" type="button" class="btn btn-primary">確定送出</button>
                             </div>
                         </div>
                     </form>
@@ -261,6 +272,22 @@
             <p>本網站於每日中午12:00~14:00進行系統維護，不便之處，敬請見諒！</p>
         </div>
     </footer>
+
+
+    <!-- Modal -->
+    <div id="overlay">
+        <div class="loader-content">
+            <div class="loader-g">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>

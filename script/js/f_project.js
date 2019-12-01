@@ -1,5 +1,5 @@
 import { GetTypeOptions } from './comm.js';
-import { checkUserLogin } from './funtion.js';
+import { checkUserLogin,showLoader, hideLoader } from './funtion.js';
 $(function () {
     let url = new URL(location.href);
     let params = url.searchParams;
@@ -86,7 +86,7 @@ $('#projectForm').submit(function (e) {
     }
 
     console.log(ApplicationFormData);
-
+    showLoader();
     // $.ajax({
     //     type: "POST",
     //     url: "/controller/SQL.ashx",
@@ -98,6 +98,7 @@ $('#projectForm').submit(function (e) {
     //              uploadfile(data.data.id);
     //         }
     //         else{
+    //             hideLoader();
     //             alert(data.Messenger);
     //         }
     //     },
@@ -238,7 +239,7 @@ function fillUserData() {
 }
 
 
-function fileUpload(id) {
+function uploadfile(id) {
 
     let fileData = new FormData();
 
@@ -260,6 +261,8 @@ function fileUpload(id) {
             alert(data.Messenger);
         }
     });
+
+    hideLoader();
 
 }
 

@@ -38,3 +38,15 @@ export function checkUserLogin(){
         location.href = '../index.html';
     }
 }
+
+export function showLoader(){
+    document.getElementById("overlay").style.display = "block";
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = "no";
+};
+
+export function hideLoader(){
+    document.getElementById("overlay").style.display = "none";
+    document.documentElement.style.overflow = 'show';
+    document.body.scroll = "yes";
+};

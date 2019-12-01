@@ -1,158 +1,381 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>│ 中原大學教學計畫管理資訊平台 │</title>
-        <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="../assets/css/layout.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="../assets/js/jquery-latest.min.js"></script>
-        <script src="../assets/js/jquery.validate.min.js"></script>
-    </head>
-    <body>
-        <div id="sublink" class="fadeInDown animated animatedS1">
-            <a href="">首頁</a>│
-            <a href="" target="_blank">中原大學</a>│
-            <a href="" target="_blank">教師發展中心</a>│
-            <a href="" target="_blank">聯絡我們</a>
-        </div>
-        <div class="mainCon">
-            <div id="logo" class="fadeInDown animated animatedS2">
-            </div>
-            <h2 class="sitename fadeInDown animated animatedS3">中原大學教學計畫管理資訊平台</h2>
-            <div id="searchBara" class="fadeInDown animated animatedS4">
-                <div id="BarBg">
-                    <form class="form-inline justify-content-center" method="post" id="login_Form" action="#">
-                        <input type="hidden" name="" value="">
-                        <div class="form-group">
-                            <label>學年期：
-                                <select name="" id="">
-                                    <option value="">請選擇</option>
-                                </select>
-                            </label>
-                            <label>專案類別：
-                                <select name="" id="">
-                                    <option value="">網路輔助專案</option>
-                                </select>
-                            </label>
-                            <label for="">關鍵字
-                                <input type="text" class="form-control form-control-sm">
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-info" value="搜尋">搜尋</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <nav class="fadeInDown animated animatedS4">
-            <ul id="sidebar">
-                <li><a href="/pages/f_post.html?id=1">網路輔助教學課程</a></li>
-                <li><a href="/pages/f_post.html?id=2">遠距教學課程</a></li>
-                <li><a href="/pages/f_post.html?id=3">數位學習課程</a></li>
-                <li><a href="/pages/f_post.html?id=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
-                <li><a href="/pages/f_post.html?id=5">教材、教具</a></li>
-                <li><a href="/pages/f_post.html?id=6">教科書</a></li>
-                <li><a href="/pages/f_post.html?id=7">教學專題研究</a></li>
-                <li><a href="/pages/f_post.html?id=7">教學工作坊</a></li>
-                <li><a href="/pages/f_post.html?id=9">教學創新課程</a></li>
-            </ul>
-        </nav>
-        
-        <div class="mainCon">
-            <div class="fadeIn animated animatedS5">
-                <div id="noticeContent" class="text-center">
-                    <div class="my-3 p-3 bg-white rounded shadow-sm">
-                        <h2 class="mb-3"><img src="../assets/imgs/icon_ppt.png">專案說明及應備文件下載</h2>
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">網路輔助教學課程</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">遠距教學課程</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">數位學習課程</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">磨課師MOOCs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">教材、教具</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">教科書</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">教學專題研究</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">教學工作坊</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">教學創新課程</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active card border-primary mb-3" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" >
-                                <div class="card-header">網路輔助教學課程</div>
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title">
-                                        專案說明：利用網路教學平台輔以數位教材、影音教材、線上討論等數位教學方式進行之課程。
-                                    </h5>
-                                    <p class="card-text">補助額度：上限15,000元</p>
-                                </div>
-                                  <div class="card-footer bg-transparent">
-                                                                        <h5 class="card-title">專案文件下載
-</h5>
-                                      <button type="button" class="btn btn-outline-success">計畫書</button>
-                                      <button type="button" class="btn btn-outline-success">課綱管理系統下截之課程大綱</button>
-                                      <button type="button" class="btn btn-outline-success">著作權切結書</button>
 
-                                  </div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>│ 中原大學教學計畫管理資訊平台 │</title>
+    <link href="../assets/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../assets/js/jquery-latest.min.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <div id="sublink" class="fadeInDown animated animatedS1">
+        <a href="../index.html">首頁</a>│
+        <a href="http://www1.cycu.edu.tw/" target="_blank">中原大學</a>│
+        <a href="http://uip.cycu.edu.tw/UIPWeb/wSite/ct?xItem=65609&ctNode=22088&mp=20001" target="_blank">教師發展中心</a>│
+        <a href="" target="_blank">聯絡我們</a>
+    </div>
+    <div class="mainCon">
+        <div id="logo" class="fadeInDown animated animatedS2">
+        </div>
+        <h2 class="sitename fadeInDown animated animatedS3">中原大學教學計畫管理資訊平台</h2>
+        <div id="searchBara" class="fadeInDown animated animatedS4">
+            <div id="BarBg">
+                <form class="form-inline justify-content-center" method="post" id="login_Form" action="#">
+                    <input type="hidden" name="" value="">
+                    <div class="form-group">
+                        <label>學年期：
+                            <select name="" id="">
+                                <option value="">請選擇</option>
+                            </select>
+                        </label>
+                        <label>專案類別：
+                            <select name="" id="">
+                                <option value="">網路輔助專案</option>
+                            </select>
+                        </label>
+                        <label for="">關鍵字
+                            <input type="text" class="form-control form-control-sm">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-info" value="搜尋">搜尋</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <nav class="fadeInDown animated animatedS4">
+        <ul id="sidebar">
+            <li><a href="/pages/f_post.html?id=1">網路輔助教學課程</a></li>
+            <li><a href="/pages/f_post.html?id=2">遠距教學課程</a></li>
+            <li><a href="/pages/f_post.html?id=3">數位學習課程</a></li>
+            <li><a href="/pages/f_post.html?id=4">大規模開放式線上課程(磨課師MOOCs)</a></li>
+            <li><a href="/pages/f_post.html?id=5">教材、教具</a></li>
+            <li><a href="/pages/f_post.html?id=6">教科書</a></li>
+            <li><a href="/pages/f_post.html?id=7">教學專題研究</a></li>
+            <li><a href="/pages/f_post.html?id=7">教學工作坊</a></li>
+            <li><a href="/pages/f_post.html?id=9">教學創新課程</a></li>
+        </ul>
+    </nav>
+
+    <div class="mainCon">
+        <div class="fadeIn animated animatedS5">
+            <div id="noticeContent" class="text-center">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+                    <h2 class="mb-3"><img src="../assets/imgs/icon_ppt.png">專案說明及應備文件下載</h2>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-cid1"
+                                role="tab" aria-controls="pills-home" aria-selected="true">網路輔助教學課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-cid2" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">遠距教學課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid3" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">數位學習課程</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid4" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">磨課師MOOCs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid5" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">教材、教具</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid6" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">教科書</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid7" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">教學專題研究</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid8" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">教學工作坊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-cid9" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">教學創新課程</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active card border-primary mb-3" id="pills-cid1" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">網路輔助教學課程</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：利用網路教學平台輔以數位教材、影音教材、線上討論等數位教學方式進行之課程。
+                                </h5>
+                                <p class="card-text">補助額度：上限15,000元</p>
                             </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件九-數位教學課程著作權切結書.doc" download>著作權切結書</a>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid2" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">遠距教學課程</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：課程二分之一以上授課時數透過通訊網路、電腦網路、視訊頻道等傳輸媒體，以互動方式進行教學之課程。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text">1.影音教材至遲應於授課前一週完備。</p>
+                                        <p class="card-text pt-3">2.影音時數至少應達授課總時數之1/3。</p>
+                                        <p class="card-text pt-3">3.作業、測驗及師生互動時數線上討論及測驗合計時數應達總授課時數之1/6。</p>
+                                        <p class="card-text pt-3">4.教材節點至少16個。</p>
+                                        <p class="card-text pt-3">5.VOD(Media)節點至少8個。</p>
+                                        <p class="card-text pt-3">6.線上作業及線上測驗合計至少4次。</p>
+                                        <p class="card-text pt-3">7.線上成績管理。</p>
+                                        <p class="card-text pt-3">8.線上問卷至少1次。</p>
+                                        <p class="card-text pt-3">9.線上問卷至少1次。</p>
+                                        <p class="card-text pt-3">補助額度：上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件九-數位教學課程著作權切結書.doc" download>著作權切結書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件四-中原大學遠距教學課程評鑑專案.pdf" download>遠距教學課程大綱(教育部版)</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid3" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">數位學習課程</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：<span class="text-danger">需為通過本校三級三審之遠距課程</span>，且依「教育部數位學習教材與課程認證相關規範」申請認證之課程。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限100,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件九-數位教學課程著作權切結書.doc" download>著作權切結書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件四-中原大學遠距教學課程評鑑專案.pdf" download>遠距教學課程大綱(教育部版)</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid4" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">大規模開放式線上課程(磨課師MOOCs)</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：透過網際網路進行非實體課程，教學內容可採影音、簡報或動畫等數位教材，配合線上或課堂進行點名、測驗、討論、繳交作業等方式混合式實施。「翻轉教室」課程(Flipped classroom)，特併入「大規模開放式線上課程(磨課師MOOCs)」專案。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限100,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件二-磨課師開課-申請書.docx" download>磨課師申請計畫書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/附件九-數位教學課程著作權切結書.doc" download>著作權切結書</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid5" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">教材、教具</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：教師自行撰寫、開發或編製適用於教學之軟體、著作、圖表、模型或出版品等教學教材。
+                                    <span class="text-danger">(教科書需結案前繳交著作二本及封面電子檔。並於封面或封底註明「本書接受教育部獎勵私立大學校院校務發展計畫經費補助｣或「中原大學獎助出版｣等字樣)。</span>
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid6" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">教科書</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：教師自行撰寫、開發或編製適用於教學之軟體、著作、圖表、模型或出版品等教學教材。
+                                    <span class="text-danger">(教科書需結案前繳交著作二本及封面電子檔。並於封面或封底註明「本書接受教育部獎勵私立大學校院校務發展計畫經費補助｣或「中原大學獎助出版｣等字樣)。</span>
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid7" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">教學專題研究</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：以改進課程與教學品質為目標，從事教學相關問題之研究，規劃改進教學品質之策略，以增進學生學習成效。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid8" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">教學專題研究</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：組成教師成長社群，以多元運作方式如教學觀摩回饋、跨領域知識整合、協同備課、主題經驗分享等群體研討活動，增進專業互動成長。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：一般工作坊 - 上限10,000元</p>
+                                        <p class="card-text pt-3">補助額度：校級 - 上限30,000元</p>
+                                        <p class="card-text pt-3">補助額度：院級 - 上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <button type="button" class="btn btn-outline-success">計畫書</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show card border-primary mb-3" id="pills-cid9" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="card-header">教學創新課程</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title">
+                                    專案說明：為教育部教學創新試辦計畫相關課程或本校政策性發展課程。
+                                </h5>
+                                <div class="row">
+                                    <div class="col-2"></div>
+                                    <div class="col text-left">
+                                        <p class="card-text pt-3">補助額度：上限30,000元</p>
+                                    </div>
+                                    <div class="col-2"></div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <h5 class="card-title">專案文件下載
+                                </h5>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081申請表(創).doc" download>計劃書</a>
+                                <a class="btn btn-outline-success" href="../file/document-file/1081課綱(創).pdf" download>課綱管理系統下截之課程大綱</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="clear"></div>
         </div>
-        <div id="outlink" class="fadeIn animated animatedS6">
-            <div class="mainCon">
-                <h2 class="link"><img src="../assets/imgs/icon_link.png">相關連結</h2>
-                <ul class="weblink">
-                    <li>
-                        <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span class="linkname">中原大學</span></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span class="linkname">中原大學</span></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span class="linkname">中原大學</span></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span class="linkname">中原大學</span></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span class="linkname">中原大學</span></a>
-                    </li>
-                </ul>
-            </div>
+    </div>
+    <div class="clear"></div>
+    </div>
+    <div id="outlink" class="fadeIn animated animatedS6">
+        <div class="mainCon">
+            <h2 class="link"><img src="../assets/imgs/icon_link.png">相關連結</h2>
+            <ul class="weblink">
+                <li>
+                    <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span
+                            class="linkname">中原大學</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span
+                            class="linkname">中原大學</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span
+                            class="linkname">中原大學</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span
+                            class="linkname">中原大學</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="../assets/imgs/site.png"><span
+                            class="linkname">中原大學</span></a>
+                </li>
+            </ul>
         </div>
-        <footer>
-            <div class="mainCon">
-                <h2>中原大學教學計畫管理資訊平台</h2>
-                <p>中原大學 教務處 版權所有 © Copyright 2019-2025 Chung Yuan Christian University</p>
-                <p>
+    </div>
+    <footer>
+        <div class="mainCon">
+            <h2>中原大學教學計畫管理資訊平台</h2>
+            <p>中原大學 教務處 版權所有 © Copyright 2019-2025 Chung Yuan Christian University</p>
+            <p>
                 建議使用瀏覽器 IE 8.0 或以上版本瀏覽解析度為1024x768或以上</p>
-                <p>本網站於每日中午12:00~14:00進行系統維護，不便之處，敬請見諒！</p>
-            </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        
-    </body>
+            <p>本網站於每日中午12:00~14:00進行系統維護，不便之處，敬請見諒！</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
