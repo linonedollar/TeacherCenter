@@ -28,10 +28,10 @@ $('#projectForm').submit(function (e) {
 
     let TeacherName = $('#input_TeacherName').val();
     let PersonnelCode = $('#input_TeacherCode').val();
-    let School = $('#input_School').val();
+    // let School = $('#input_School').val();
     let Department = $('#input_Department').val();
-    let ArrivalDate = $('#input_ArrivalDate').val();
-    let ArrivalPeriod = $('#input_ArrivalPeriod').val();
+    // let ArrivalDate = $('#input_ArrivalDate').val();
+    // let ArrivalPeriod = $('#input_ArrivalPeriod').val();
 
     let ProjectCategroy = params.get('sid');
     let ProjectName = $('#input_ProjectName').val();
@@ -65,10 +65,10 @@ $('#projectForm').submit(function (e) {
     let ApplicationFormData = {
         TeacherName: TeacherName,
         PersonnelCode: PersonnelCode,
-        School: School,
+        // School: School,
         Department: Department,
-        ArrivalDate: ArrivalDate,
-        ArrivalPeriod: ArrivalPeriod,
+        // ArrivalDate: ArrivalDate,
+        // ArrivalPeriod: ArrivalPeriod,
         ProjectCategroy: ProjectCategroy,
         ProjectName: ProjectName,
         Email: Email,
@@ -84,7 +84,7 @@ $('#projectForm').submit(function (e) {
         Type: Type,
         WorkshopName: WorkshopName
     }
-
+    //ps.申請日抓server時間
     console.log(ApplicationFormData);
     showLoader();
     // $.ajax({
@@ -223,19 +223,19 @@ function RenderSubject(data) {
 }
 
 function fillUserData() {
-    let TeacherName = '計畫主持人/老師姓名：' + sessionStorage.TeacherName;
-    let PersonnelCode = '人事碼：' + sessionStorage.PersonnelCode;
-    let ArrivalDate = '到校日：' + sessionStorage.ArrivalDate;
-    let ArrivalPeriod = '到校期間：' + sessionStorage.ArrivalPeriod;
-    let Department = '聘任系所：' + sessionStorage.Department;
-    let School = '所屬學院：' + sessionStorage.School;
+    let TeacherName = sessionStorage.TeacherName;
+    let PersonnelCode = sessionStorage.PersonnelCode;
+    // let ArrivalDate = '到校日：' + sessionStorage.ArrivalDate;
+    // let ArrivalPeriod = '到校期間：' + sessionStorage.ArrivalPeriod;
+    let Department = sessionStorage.Department;
+    // let School = '所屬學院：' + sessionStorage.School;
 
     $('#input_TeacherName').val(TeacherName);
     $('#input_TeacherCode').val(PersonnelCode);
-    $('#input_School').val(School);
+    // $('#input_School').val(School);
     $('#input_Department').val(Department);
-    $('#input_ArrivalDate').val(ArrivalDate);
-    $('#input_ArrivalPeriod').val(ArrivalPeriod);
+    // $('#input_ArrivalDate').val(ArrivalDate);
+    // $('#input_ArrivalPeriod').val(ArrivalPeriod);
 }
 
 

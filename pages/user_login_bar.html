@@ -1,15 +1,17 @@
-<form class="form-inline justify-content-center">
+<form id="login_form" action="https://itouch.cycu.edu.tw/active_system/login/sso/login1.jsp" class="form-inline justify-content-center">
     <input type="hidden" name="" value="">
     <div class="form-group">
         <label>帳號：
-            <input type="text" class="form-control form-control-sm" id="cycu-admin" name="cycu-admin"
+            <input type="text" class="form-control form-control-sm" id="cycu-admin" name="UserNm"
                 required="required">
         </label>
         <label>密碼：
-            <input type="password" class="form-control form-control-sm" name="cycu-pws" id="cycu-pws"
+            <input type="password" class="form-control form-control-sm" name="UserPasswd" id="cycu-pws"
                 required="required">
         </label>
+        <input name="returnPath" runat="server" Value="http://140.135.66.116/pages/login_acc.html" hidden/>
+        <input name="failPath" runat="server" Value="http://140.135.66.116/" hidden/>
     </div>
-    <button type="button" id="login-btn" class="btn btn-info" value="登入">登入</button>
+    <button type="submit" id="login-btn" class="btn btn-info" value="登入">登入</button>
 </form>
 <script type="text/javascript" src="script/js/user_login_bar.js"></script>
